@@ -22,6 +22,13 @@ def greet_json():
 def get_sentiment(item: Item):
     return sentiment_pipeline(item.text)[0]
 
+# New add endpoint - simple version
+@app.get("/add")
+def add_numbers(num1: float, num2: float):
+    result = num1 + num2
+    return {"num1": num1, "num2": num2, "result": result}
+
+
 @app.get("/health")
 def health_check():
     return {"status": "ok"} 
