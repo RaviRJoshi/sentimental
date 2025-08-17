@@ -19,7 +19,7 @@ jobs:
         HF_USERNAME: your-hf-username
         HF_SPACE_NAME: your-space-name
       run: |
-        git config --global user.email "action@github.com"
+        git config --global user.email "ravijoshi@duck.com"
         git config --global user.name "GitHub Action"
         git remote add hf https://$HF_USERNAME:$HF_TOKEN@huggingface.co/spaces/$HF_USERNAME/$HF_SPACE_NAME
         git push hf main --force
