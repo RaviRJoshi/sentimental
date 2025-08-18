@@ -78,3 +78,16 @@ def health_check_z():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=8080)
+
+# ➜  ~  $  curl -X POST "http://127.0.0.1:8080/sentiment" \
+#          -H "Content-Type: application/json" \                                                                                                                      
+#          -d '{"text": "I am really enjoying this experience!"}'                                                                                    
+
+# {"label":"POSITIVE","score":0.9998693466186523}%                                                                                                                                                                  ➜  ~  $     curl -X POST "http://127.0.0.1:8080/sentiment" \
+#          -H "Content-Type: application/json" \                                                                                                                      
+#        -d '{"text": "This is making me very angry."}'
+# {"label":"NEGATIVE","score":0.9993513226509094}%                                                                                                                                                                  ➜  ~  $ curl http://127.0.0.1:8080/health
+
+# {"status":"ok"}%                                                                                                                                                                                                  ➜  ~  $ curl http://127.0.0.1:8080/healthz
+
+# {"Status":"Ok. Current Date Time is: 2025-08-18 14:48:59"}%        
