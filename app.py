@@ -14,7 +14,7 @@ def greet_json():
     try:
         formatted_time_string =  datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         formatted_time_string = "Current Date Time is: ".join(formatted_time_string)
-        return {"Hello": formatted_time_string}
+        return {"Hello": "World"}
     except Exception as e:
         return {"Hello": f"Error occured: {e}"}
 
