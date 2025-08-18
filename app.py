@@ -91,3 +91,24 @@ if __name__ == "__main__":
 # {"status":"ok"}%                                                                                                                                                                                                  ➜  ~  $ curl http://127.0.0.1:8080/healthz
 
 # {"Status":"Ok. Current Date Time is: 2025-08-18 14:48:59"}%        
+
+#   Here are the corresponding curl commands to test your live application on Hugging Face:
+
+#   1. Root/Greeting Endpoint
+
+#    1 curl https://ravirjoshi-sentimental.hf.space/
+
+#   2. Sentiment Analysis Endpoint
+
+#    1 curl -X POST "https://ravirjoshi-sentimental.hf.space/sentiment" \
+#    2      -H "Content-Type: application/json" \
+#    3      -d '{"text": "This is running live on Hugging Face!"}'
+
+#   3. Addition Endpoint
+
+#    1 curl "https://ravirjoshi-sentimental.hf.space/add?num1=100&num2=200"
+
+#   4. Health Check Endpoints
+
+#    1 curl https://ravirjoshi-sentimental.hf.space/health
+#    1 curl https://ravirjoshi-sentimental.hf.space/healthz
