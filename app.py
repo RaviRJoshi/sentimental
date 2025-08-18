@@ -10,7 +10,7 @@ from contextlib     import asynccontextmanager
 
 
 @asynccontextmanager
-asnyc def lifespan(app: FastAPI):
+async def lifespan(app: FastAPI):
     print("Application startup: Initializing resources...")
     
     model_path = os.getenv("MODEL_PATH")
